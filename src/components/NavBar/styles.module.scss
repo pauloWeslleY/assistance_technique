@@ -1,0 +1,51 @@
+@use '../../scss/colors';
+@use '../../scss/variables';
+
+.container {
+  background: colors.$zinc_800;
+  padding-block: 0.5rem;
+}
+
+.navbar {
+  max-width: 996px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: colors.$sky_100;
+  }
+
+  &__menu {
+    list-style: none;
+    display: flex;
+    gap: 1.75rem;
+
+    li {
+      font-weight: 500;
+      font-size: 1.55rem;
+
+      a {
+        color: colors.$sky_100;
+        display: flex;
+
+        transition: all 0.3s ease-in;
+
+        &:hover {
+          color: colors.$sky_600;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding-inline: 2rem;
+  }
+}

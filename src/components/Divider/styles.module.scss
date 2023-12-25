@@ -1,0 +1,10 @@
+@use '../../scss/colors';
+
+.divider {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsl(224, 64%, 33%, 1),
+    hsla(224, 65%, 88%, 0.34)
+  );
+}

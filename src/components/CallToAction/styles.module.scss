@@ -1,0 +1,78 @@
+@use '../../scss/colors';
+@use '../../scss/variables';
+
+.callTo__hero {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  column-gap: 5rem;
+
+  margin-block: 10rem;
+
+  &_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      font-family: variables.$font_title;
+      font-weight: 700;
+      font-size: 2.85rem;
+      color: colors.$zinc_800;
+    }
+
+    span {
+      font-size: 1.85rem;
+      font-weight: 400;
+      color: colors.$gray_800;
+    }
+
+    p {
+      margin-block: 3rem;
+
+      font-weight: 500;
+      font-size: 1.5rem;
+      font-family: variables.$font_body;
+
+      color: colors.$zinc_700;
+    }
+  }
+
+  &_image {
+    padding: 0.1rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -8.3%;
+      left: -33%;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      background-color: colors.$sky_800;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      z-index: 1;
+      border-radius: 0.25rem;
+    }
+
+    &::before {
+      border-radius: 0.25rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .callTo__hero {
+    grid-template-columns: repeat(1, 1fr);
+
+    &_item {
+      margin-top: 4rem;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@use '../../scss/colors';
+
+.banner__hero {
+  background-image: url('../../../public/images/slider-00.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: calc(100vh - 75px);
+  padding: 0.5rem;
+}

@@ -1,0 +1,59 @@
+@use '../../scss/colors';
+@use '../../scss/variables';
+
+.form__hero {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+
+  gap: 12rem;
+
+  margin: 12rem 0;
+
+  &_contact {
+    place-self: center;
+
+    h3 {
+      font-size: 2.895rem;
+      font-weight: 600;
+
+      margin-bottom: 0.675rem;
+
+      color: colors.$zinc_800;
+    }
+
+    span {
+      font-size: 1.995rem;
+      font-weight: 500;
+
+      color: colors.$zinc_600;
+    }
+
+    .form__contact {
+      display: flex;
+      flex-direction: column;
+
+      margin-top: 5rem;
+
+      list-style: none;
+
+      li {
+        font-size: 1.845rem;
+        font-weight: 500;
+        color: colors.$gray_700;
+
+        span {
+          font-weight: 600;
+          color: colors.$zinc_800;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .form__hero {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

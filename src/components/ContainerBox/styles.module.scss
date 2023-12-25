@@ -1,0 +1,11 @@
+.container {
+  max-width: 996px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    margin-inline: 5rem;
+  }
+  @media (max-width: 425px) {
+    margin-inline: 4rem;
+  }
+}

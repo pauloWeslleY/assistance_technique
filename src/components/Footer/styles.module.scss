@@ -1,0 +1,137 @@
+@use '../../scss/colors';
+@use '../../scss/variables';
+
+$padding__footer: 0.785rem;
+
+.footer__container {
+  background-color: colors.$gray_800;
+  height: 20rem;
+  padding-block: 2rem;
+}
+
+.footer {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+
+  gap: 10rem;
+
+  h2 {
+    font-size: 2.85rem;
+    font-weight: 400;
+    font-family: variables.$font_body;
+
+    color: colors.$zinc_200;
+    margin-bottom: 3rem;
+  }
+
+  &__context {
+    padding: $padding__footer;
+
+    span {
+      color: colors.$blue_300;
+    }
+  }
+
+  &__social_links {
+    padding: $padding__footer;
+
+    .footer__social {
+      list-style: none;
+      margin-top: 1.75rem;
+
+      display: flex;
+      gap: 1.2rem;
+
+      li {
+        font-size: 2.455rem;
+
+        a {
+          display: flex;
+          align-items: center;
+
+          color: colors.$blue_400;
+          background: transparent;
+
+          transition: all 0.3s ease-in;
+
+          &:hover {
+            background: colors.$zinc_700;
+            color: colors.$sky_600;
+
+            border-radius: 1rem;
+            padding: 0.5rem;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer__bar {
+  max-width: 1100px;
+  margin-inline: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &_copyright {
+    font-size: 1.375rem;
+    font-weight: 400;
+    font-family: variables.$font_title;
+  }
+
+  &_link {
+    font-size: 1.355rem;
+
+    blockquote {
+      display: inline;
+
+      a {
+        color: colors.$blue_500;
+
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: colors.$gray_400;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  background-color: colors.$gray_900;
+  color: colors.$zinc_100;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-inline: 2rem;
+  }
+
+  .footer__container {
+    height: auto;
+  }
+
+  .footer {
+    grid-template-columns: repeat(1, 1fr);
+
+    &__context {
+      text-align: center;
+    }
+
+    &__social_links {
+      text-align: center;
+
+      .footer__social {
+        justify-content: center;
+        margin-block: 3rem;
+      }
+    }
+  }
+}

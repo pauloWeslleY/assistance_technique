@@ -1,0 +1,49 @@
+@use '../../scss/colors';
+@use '../../scss/variables';
+
+.cards {
+  display: flex;
+  gap: 1.7rem;
+
+  margin-block: 8.5rem;
+}
+
+.card__service_item {
+  flex: 1 1 150rem;
+  flex-direction: column;
+  color: colors.$zinc_800;
+
+  padding: 0.85rem;
+  text-align: center;
+  cursor: pointer;
+
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    color: colors.$sky_800;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 2.755rem;
+  }
+
+  svg {
+    width: 10rem;
+    height: 10rem;
+
+    margin-block: 2rem;
+  }
+
+  span {
+    display: block;
+    font-size: 1.785rem;
+  }
+}
+
+@media (max-width: 778px) {
+  .cards {
+    flex-wrap: wrap;
+  }
+}
